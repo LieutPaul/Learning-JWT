@@ -1,11 +1,11 @@
 GET http://localhost:3000/posts
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiVmlrYXMiLCJpYXQiOjE2NzQ3Mzc4OTR9.GYN-ka5-uAeNWgNXT6QhOChTQOB4Qb9SniqilF5y8Dk
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiVmlrYXMyIiwiaWF0IjoxNjc0NzQyMDAxLCJleHAiOjE2NzQ3NDIwMTZ9.lh6BG2-HuSe4dWTGEWVkf2CAva6NAND6PfDpj9TzhB4
 ###
 
-POST http://localhost:3000/login  
+POST http://localhost:4000/login  
 #Should be sent first as jwt needs to create token for the user
 Content-Type: application/json
 
 {
-    "username" : "Vikas"
+    "username" : "Vikas2"
 }
