@@ -20,7 +20,7 @@ function authenticateToken(req,res,next) { //MiddleWare to check if token is val
             res.sendStatus(403); //Invalid Token => No Access
         }
         req.user = user;
-        console.log(user);
+        // console.log(user);
         next();
     })
 }
