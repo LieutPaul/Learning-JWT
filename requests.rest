@@ -2,7 +2,8 @@ GET http://localhost:3000/posts
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiVmlrYXMiLCJpYXQiOjE2NzQ3Mzc4OTR9.GYN-ka5-uAeNWgNXT6QhOChTQOB4Qb9SniqilF5y8Dk
 ###
 
-POST http://localhost:3000/login
+POST http://localhost:3000/login  
+#Should be sent first as jwt needs to create token for the user
 Content-Type: application/json
 
 {

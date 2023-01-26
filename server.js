@@ -37,9 +37,10 @@ const posts=[
     }
 ]
 
-app.get("/posts",authenticateToken,(req,res)=>{
+app.get("/posts",authenticateToken,(req,res)=>{ 
+    // authenticateToken is a middleware function that authorizes the token sent by the user
+    // This function will run only if authenticateToken calls next(), otherwise it will send Status 403
     console.log("Get request from /posts")
-    console.log(req.user)
     res.json(posts.filter(post => post.name === req.user.name));
 });
 
@@ -47,7 +48,7 @@ app.get("/posts",authenticateToken,(req,res)=>{
 app.post("/login", (req,res)=>{
     const username = req.body.username
     const user = {name : username};
-    const accessToken = jwt.sign(user,process.env.ACCESS_TOKEN_SECRET);
+    const accessToken = jwt.sign(user,process.env.ACCESS_TOKEN_SECRET); //Creating token for the user
     res.json({accessToken : accessToken});
 });
 
